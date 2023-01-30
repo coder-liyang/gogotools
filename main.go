@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fyne.io/fyne/v2"
 	"time"
 
 	"fyne.io/fyne/v2/app"
@@ -10,6 +11,7 @@ import (
 func main() {
 	a := app.New()
 	w := a.NewWindow("GoGoTools")
+	w.Resize(fyne.NewSize(400, 300))
 
 	clock := widget.NewLabel(time.Now().Format("Time: 15:04:05"))
 	w.SetContent(clock)
